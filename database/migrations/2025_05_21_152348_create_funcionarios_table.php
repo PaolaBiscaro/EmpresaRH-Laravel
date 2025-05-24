@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('cargo');
             $table->date('dt_nasc');
-            $table->unsignedBigInteger('departamento_id')->nullable(); //foreign key - recebe a chave
+            $table->unsignedBigInteger('departamento_id')->nullable(); //recebe a chave, pode ser nulo
             $table->foreign('departamento_id')->references('id')->on('departamentos');
             $table->timestamps();
         });

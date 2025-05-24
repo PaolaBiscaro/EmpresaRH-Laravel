@@ -8,4 +8,8 @@ class Departamento extends Model
 {
     protected $table = 'departamentos';
     protected $fillable = ['nome', 'descricao' ];
+
+    public function funcionarios(){
+        return $this->hasMany(Funcionario::class, 'departamento_id', 'id');
+    }
 }
